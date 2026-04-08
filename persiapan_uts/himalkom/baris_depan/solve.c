@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 int main()
 {
-
   int n;
   scanf("%d", &n);
+
   int anakPerBaris[n];
 
   for (int i = 0; i < n; i++)
@@ -13,10 +14,12 @@ int main()
 
   if (n % 2 == 0)
   {
+    // Ketua kelas di paling utara
     printf("*\n");
-    for (int i = 0; i < n; i++)
+
+    for (int j = 0; j < n; j++)
     {
-      for (int j = 0; j < anakPerBaris[i]; j++)
+      for (int k = 0; k < anakPerBaris[j]; k++)
       {
         printf("*");
       }
@@ -25,27 +28,29 @@ int main()
   }
   else
   {
+    // Ketua kelas di tengah
     int mid = n / 2;
-    for (int i = 0; i < n; i++)
+
+    for (int j = 0; j < n; j++)
     {
-      if (i == mid)
+      if (j == mid)
       {
-        printf("*");
-        for (int j = 0; j < anakPerBaris[i]; j++)
+        // baris tengah: tambah 1 bintang untuk ketua
+        for (int k = 0; k < anakPerBaris[j] + 1; k++)
         {
           printf("*");
         }
-        printf("\n");
       }
       else
       {
+        // baris lain: geser 1 spasi ke kanan
         printf(" ");
-        for (int j = 0; j < anakPerBaris[i]; j++)
+        for (int k = 0; k < anakPerBaris[j]; k++)
         {
           printf("*");
         }
-        printf("\n");
       }
+      printf("\n");
     }
   }
 
