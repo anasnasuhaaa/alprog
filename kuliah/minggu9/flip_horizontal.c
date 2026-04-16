@@ -32,7 +32,7 @@ int main()
   }
 
   // after
-  printf("\nafter Flip: \n");
+  printf("\nAfter Flip: \n");
   for (int i = 0; i < row; i++)
   {
     for (int j = col - 1; j >= 0; j--)
