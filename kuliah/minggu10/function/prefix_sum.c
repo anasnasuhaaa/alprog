@@ -2,10 +2,16 @@
 void prefixSum(int n, int arr[])
 {
   int res[n];
+  int prev = 0;
   for (int i = 0; i < n; i++)
   {
-    // for (int j = 0; j < n - 1; j++)
-    //   int sum = 0;
+    prev += arr[i];
+    res[i] = prev;
+  }
+  printf("\nIni: ");
+  for (int i = 0; i < n; i++)
+  {
+    printf("%d ", res[i]);
   }
 }
 int main()
@@ -19,11 +25,6 @@ int main()
     scanf("%d", &arr[i]);
   }
 
-  // printf("\nIni: ");
-  // for (int i = 0; i < n; i++)
-  // {
-  //   printf("%d ", arr[i]);
-  // }
   prefixSum(n, arr);
   return 0;
 }
