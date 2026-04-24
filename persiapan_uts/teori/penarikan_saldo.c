@@ -2,25 +2,24 @@
 
 int main()
 {
- long long penarikan;
- long long saldo = 1000000;
+  long long penarikan, saldo = 1000000;
   scanf("%lld", &penarikan);
 
-  if (penarikan <= saldo)
+  if (penarikan % 50000 == 0)
   {
-    if (penarikan % 50000 == 0)
+    if (penarikan <= saldo)
     {
-      saldo = saldo - penarikan;
-      printf("Berhasil. Sisa saldo = %lld", saldo);
+      saldo -= penarikan;
+      printf("Berhasil. Sisa saldo = %lld rupiah.", saldo);
     }
     else
     {
-      printf("Penarikan harus kelipatan 50000.");
+      printf("Saldo tidak cukup.");
     }
   }
   else
   {
-    printf("Saldo tidak cukup.");
+    printf("Penarikan harus kelipatan 50000 rupiah.");
   }
 
   return 0;

@@ -17,12 +17,12 @@ int main()
     printf("%d \n", arrNum[i]);
   }
   printf("\n");
-  // printf("%zu", sizeof(arrNum));
 
   // Get the memory address of the myNumbers array
   printf("%p\n", arrNum);
 
   // Get the memory address of the first array element
   printf("%p\n", &arrNum[0]);
+  for(int i = 0; i < )
   return 0;
 }
