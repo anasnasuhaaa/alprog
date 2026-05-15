@@ -13,15 +13,6 @@ int main()
   printf("1. Tambah\n2. Kurang\n3. Kali\n4. Bagi\n Silakan pilih: ");
 
   scanf("%d", &x);
-  switch (x)
-  {
-  case 1:
-    int (*fp)(int, int) = tambah;
-    // printf(n)
-    break;
-  default:
-    break;
-  }
 
   printf(fp(3, 3));
 
