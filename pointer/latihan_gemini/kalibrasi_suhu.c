@@ -32,13 +32,13 @@ int main()
 
   float arrSuhu[n];
   printf("Masukkan Data Suhu: ");
+  
   for (int i = 0; i < n; i++)
   {
     scanf("%f", &arrSuhu[i]);
   }
 
   float *arr = arrSuhu;
-
   proses_sinyal(arr, n, kalibrasi);
 
   return 0;
