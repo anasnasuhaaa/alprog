@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// INI BELUM BENER
 int main()
 {
   int n;

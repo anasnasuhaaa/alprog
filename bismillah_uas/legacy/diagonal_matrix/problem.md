@@ -30,7 +30,7 @@ Cetak dua buah bilangan bulat:
 
 Kedua nilai dipisahkan oleh satu spasi dan diakhiri dengan karakter newline.
 
-## Contoh Input 1
+## Contoh Masukan 1
 
 ```text
 4
@@ -40,7 +40,7 @@ Kedua nilai dipisahkan oleh satu spasi dan diakhiri dengan karakter newline.
 3 4 5 6
 ```
 
-## Contoh Output 1
+## Contoh Keluaran 1
 
 ```text
 14 16
