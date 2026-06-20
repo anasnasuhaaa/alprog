@@ -2,24 +2,31 @@
 #include <string.h>
 #include <ctype.h>
 
-
 int main()
 {
-  // int a = 'A';
-  // printf("%d", a);
-
   int ch;
   int n = 0;
+  int last_ch = 0;
 
-  while ((ch = getChar()) != EOF)
+  while ((ch = getchar()) != EOF)
   {
     n++;
+    if (isgraph(ch))
+    {
+      last_ch = ch;
+    }
   }
 
-  printf("Jumlah karakter: %d", n);
+  printf("Jumlah karakter: %d\n", n);
+  if (n > 0)
+  {
+    printf("Karakter Terakhir: %c\n", (char)last_ch);
+  }
 
-  // Print ch
-  printf("Karakter terakhir: %c", ch);
+  for (int i = 0; i < n; i++)
+  {
+    printf("%c", (char)ch);
+  }
 
   return 0;
 }
