@@ -28,14 +28,16 @@ int main()
   printf("Ukuran Array: ");
   scanf("%d", &n);
 
-  dt = (int *)malloc(n * sizeof(int));
+  dt = malloc(n * sizeof(int)); // 4 Bytes * n
   printf("\nMasukkan Array: ");
   for (int i = 0; i < n; i++)
   {
     scanf("%d", &x);
     dt[i] = x;
   }
-  int *res = balik(n, dt);
+  int *res = balik(n, dt); // {5,4,3,2,1}
+
+  
   printLn(n, res);
   return 0;
 }
