@@ -1,46 +1,38 @@
 #include <stdio.h>
-// INI BELUM BENER
+#include <stdlib.h>
+
 int main()
 {
   int n;
-  scanf("%d", &n);
+  if (scanf("%d", &n) != 1)
+    return 0;
 
-  int arr[n];
+  int ayam[n];
   for (int i = 0; i < n; i++)
   {
-    scanf("%d", &arr[i]);
+    scanf("%d", &ayam[i]);
   }
 
-  int jumlah_kapten = 0;
+  int kapten[n];
+  int count_kapten = 0;
 
-  int max_kanan = -1;
-  for (int i = n - 1; i >= 0; i--)
+  int max_kapten = ayam[n - 1];
+  kapten[count_kapten++] = n;
+
+  for (int i = n - 2; i >= 0; i--)
   {
-    if (arr[i] > max_kanan)
+    if (ayam[i] > max_kapten)
     {
-      max_kanan = arr[i];
-      jumlah_kapten++;
+      max_kapten = ayam[i];
+      kapten[count_kapten++] = i + 1;
     }
   }
 
-  printf("%d", jumlah_kapten);
-  printf("\n");
-  int posisi_kapten[jumlah_kapten];
-
-  int idx_posisi_kapten = 0;
-
-  int max_kanan2 = -1;
-  for (int i = n - 1; i >= 0; i--)
+  printf("%d\n", count_kapten);
+  for (int i = count_kapten - 1; i >= 0; i--)
   {
-    if (arr[i] > max_kanan2)
-    {
-      posisi_kapten[idx_posisi_kapten++] = i + 1;
-    }
+    printf("%d ", kapten[i]);
   }
 
-  for (int i = jumlah_kapten - 1; i >= 0; i++)
-  {
-    printf("%d ", posisi_kapten[i]);
-  }
   return 0;
 }
