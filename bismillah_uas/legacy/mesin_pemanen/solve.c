@@ -74,7 +74,7 @@ int main()
       max_panen = current_panen;
     current_panen = 0;
   }
-
+  
   printf("%d", max_panen);
 
   return 0;
