@@ -14,12 +14,12 @@ int main()
   getchar();
   while (fgets(input_str, sizeof(input_str), stdin))
   {
-    char *word = strtok(input_str, " \n\t\r");
+    char *word = strtok(input_str, " \n");
     while (word != NULL)
     {
       if (strcasecmp(word, target) == 0)
         count++;
-      word = strtok(NULL, " \n\t\r");
+      word = strtok(NULL, " \n");
     }
   }
   printf("%d", count);
